@@ -2,7 +2,7 @@
 <html>
 <body>
   <h1>Cloudflare - GET IP</h1>
-  <p>Cloudflare Workers 是一个强大的工具，可用于获取访问网站的用户的 IP 地址和其他相关信息。通过添加事件监听器，每当触发事件时，它会调用 handleEvent 函数来处理该事件。该函数从请求的头部信息中提取用户的 IP 地址（cf-connecting-ip）、国家（cf-ipcountry）和用户代理（user-agent）。这些信息将被组装成一个对象，然后转换为 JSON 格式并作为响应返回。请注意，此代码依赖于 Cloudflare 的头部信息，如果在非 Cloudflare 的环境中使用，可能无法正确获取这些信息。<a href="https://ip.zhuoc.link/">演示地址</a></p>
+  <p>Cloudflare Workers 是一个强大的工具，可用于获取访问网站的用户的 IP 地址和其他相关信息。通过添加事件监听器，每当触发事件时，它会调用 handleEvent 函数来处理该事件。该函数从请求的头部信息中提取用户的 IP 地址（cf-connecting-ip）、国家（cf-ipcountry）和用户代理（user-agent）。这些信息将被组装成一个对象，然后转换为 JSON 格式并作为响应返回。此代码依赖于 Cloudflare 的头部信息，如果在非 Cloudflare 的环境中使用，可能无法正确获取这些信息。<a href="https://ip.zhuoc.link/">演示地址</a></p>
   
   <h2>Usage</h2>
   <ol>
