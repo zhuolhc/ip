@@ -1,0 +1,23 @@
+addEventListener('fetch', event => {
+  event.respondWith(handleEvent(event))
+})
+
+async function handleEvent(event) {
+  const { request } = event
+  const { headers } = request
+  const ip = headers.get('cf-connecting-ip') || ''
+  const country = headers.get('cf-ipcountry') || ''
+  const userAgent = headers.get('user-agent') || ''
+
+  let data = {
+    ip: ip,
+    country: country,
+    userAgent: userAgent
+  }
+
+  return new Response(JSON.stringify(data), {
+    headers: {
+      'content-type': 'application/json;charset=UTF-8',
+    },
+  })
+}
