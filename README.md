@@ -1,8 +1,19 @@
-# cloudflare- GET- IP
-Cloudflare Workers 是一个强大的工具，可用于获取访问网站的用户的 IP 地址和其他相关信息。通过添加事件监听器，每当触发事件时，它会调用 handleEvent 函数来处理该事件。该函数从请求的头部信息中提取用户的 IP 地址（cf-connecting-ip）、国家（cf-ipcountry）和用户代理（user-agent）。这些信息将被组装成一个对象，然后转换为 JSON 格式并作为响应返回。请注意，此代码依赖于 Cloudflare 的头部信息，如果在非 Cloudflare 的环境中使用，可能无法正确获取这些信息。
-使用方法
-1、创建一个 Cloudflare 账号，请点击链接 <a href="https://www.cloudflare.com">Cloudflare</a> 访问 Cloudflare 官网。
-2、在 Cloudflare 控制台中，点击左侧的 "Workers"，然后选择 "概述"，接着点击 "创建应用程序"，再选择 "创建 Workers"。为 Workers 指定一个名称，然后点击 "部署"。
-3、配置 Workers：选择 "快速编辑"，将代码替换为 Workers 中的代码。
-4、如果有域名，你可以将 URL 模式映射到 Workers，使 Workers 根据传入请求的路由执行，从而实现域名网站的查看。
-5、请注意，该项目目前还不完善，且没有用户界面，可作为网站的分支用于完善网站信息内容。
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cloudflare - GET IP</title>
+</head>
+<body>
+  <h1>Cloudflare - GET IP</h1>
+  <p>Cloudflare Workers is a powerful tool that can be used to retrieve the IP address and other related information of the users accessing your website. By adding an event listener, it calls the handleEvent function to process the event. The function extracts the user's IP address (cf-connecting-ip), country (cf-ipcountry), and user agent (user-agent) from the request headers. These pieces of information are then assembled into an object, converted to JSON format, and returned as a response. Please note that this code relies on Cloudflare headers and may not work correctly in a non-Cloudflare environment.</p>
+  
+  <h2>Usage</h2>
+  <ol>
+    <li>Create a Cloudflare account by visiting the <a href="https://www.cloudflare.com">Cloudflare website</a>.</li>
+    <li>In the Cloudflare dashboard, click on "Workers" in the left sidebar, then select "Overview" and click on "Create Application". Choose "Create Workers". Provide a name for your Workers and click on "Deploy".</li>
+    <li>Configure Workers: Select "Quick Edit" and replace the code with the code from your Workers.</li>
+    <li>If you have a domain, you can map URL patterns to your Workers to execute based on incoming requests, allowing you to view the website using the domain.</li>
+    <li>Please note that this project is currently incomplete and does not have a user interface. It can be used as a branch of a website to enhance website information content.</li>
+  </ol>
+</body>
+</html>
