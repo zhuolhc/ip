@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-  <h1>Cloudflare - GET IP</h1>
+  <h1>Cloudflare workers - GET IP</h1>
   <p>Cloudflare Workers 是一个强大的工具，无需服务器，可用于获取访问网站的用户的 IP 地址(支持IPV4以及IPV6)和其他相关信息。通过添加事件监听器，每当触发事件时，它会调用 handleEvent 函数来处理该事件。该函数从请求的头部信息中提取用户的 IP 地址（cf-connecting-ip）、国家（cf-ipcountry）、用户代理（user-agent）和使用浏览器。这些信息将被组装成一个对象，然后转换为 JSON 格式并作为响应返回。此代码依赖于 Cloudflare 的头部信息，如果在非 Cloudflare 的环境中使用，可能无法正确获取这些信息。<a href="https://ip.zhuoc.link/">演示地址</a></p>新代码新增获取指定测试网址的上传下载速度，代码中以我的个人博客为例。</p>
   
   <h2>Usage</h2>
