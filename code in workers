@@ -15,7 +15,10 @@ async function handleEvent(event) {
     userAgent: userAgent
   }
 
-  return new Response(JSON.stringify(data), {
+  // 格式化和排版 JSON 数据
+  const formattedData = JSON.stringify(data, null, 2)
+
+  return new Response(formattedData, {
     headers: {
       'content-type': 'application/json;charset=UTF-8',
     },
