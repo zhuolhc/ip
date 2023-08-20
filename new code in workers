@@ -15,24 +15,22 @@ async function handleEvent(event) {
     userAgent: userAgent
   };
 
-
-
   // 测试用户网络状况的上传下载时间
   const { uploadTime, downloadTime } = await testNetworkSpeed();
   data.uploadTime = uploadTime;
   data.downloadTime = downloadTime;
 
-  return new Response(JSON.stringify(data), {
+  const responseData = JSON.stringify(data, null, 2); // 使用两个空格缩进格式化输出
+
+  return new Response(responseData, {
     headers: {
       'content-type': 'application/json;charset=UTF-8',
     },
   });
 }
 
-
-
 async function testNetworkSpeed() {
-  const testURL = 'https://blog.zhuoc.link'; // 替换为你的测试 URL,我以我的个人博客为例
+  const testURL = 'https://blog.zhuoc.link'; // 替换为你的测试 URL，我以我的个人博客为例
 
   // 发起上传和下载测试请求
   const startTime = performance.now();
