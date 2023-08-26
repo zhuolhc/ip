@@ -13,6 +13,8 @@
     <li>new new code in workers 中确保在Cloudflare Workers环境中配置好电子邮件服务提供商的API密钥和其他必要的配置。由于qq邮箱好像没有官方API端点URL，所以推荐使用gmail,Gmail 的 API 端点 URL 是 "https://gmail.googleapis.com ，代码中已经添加好了，可自行修改。要开通<a href="https://console.cloud.google.com/ ">谷歌云</a>免费获取API_KEY，具体操作方法见<a href="https://developers.google.com/gmail/api/quickstart/js?hl=zh_CN">官方文档</a>，同时需要有接收的邮箱（不用API_KEY）,将两个邮箱和API_KEY分别填入方可。
     <li>该项目目前尚不完善，可作为网站的分支用于完善网站信息内容，请勿非法获取用户信息。</li>
   </ol>
+  <h3>LICENCE</h3>
+  本项目基于<a href="https://opensource.org/license/mit/">MIT</a>
 </body>
 </html>
-本项目基于<a href="https://opensource.org/license/mit/">MIT</a>
+
