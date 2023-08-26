@@ -31,7 +31,7 @@ async function handleEvent(request) {
 
   // ...
 
-  // 返回带有 JSON 数据的响应，这样格式要清楚很多，（其实也没清楚多少）
+  // 返回带有 JSON 数据的响应，这样格式要清楚很多
   const formattedData = JSON.stringify(data, null, 2);
   return new Response(formattedData, {
     headers: {
@@ -55,7 +55,7 @@ async function sendEmail(content) {
       {
         to: [
           {
-            //改一下YOUR_EMAIL_ADDRESS，字面意思
+            //改一下YOUR_EMAIL_ADDRESS
             email: 'YOUR_EMAIL_ADDRESS',
           },
         ],
@@ -63,7 +63,7 @@ async function sendEmail(content) {
       },
     ],
     from: {
-      //也改一下，字面意思
+      //也改一下
       email: 'SENDER_EMAIL_ADDRESS',
     },
     content: [
