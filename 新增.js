@@ -47,6 +47,10 @@ async function handleEvent(event) {
   data.uri = url.pathname;
   data.method = request.method;
 
+  // 获取当前时间并添加到数据中
+  const currentTime = new Date().toLocaleString()
+  data.currentTime = currentTime
+
   // 格式化和排版 JSON 数据
   const formattedData = JSON.stringify(data, null, 2)
 
