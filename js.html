@@ -1,0 +1,69 @@
+<html>
+      <head>
+        <title>IP Information</title>
+        <style>
+          body {
+            background-image: url('https://img2.baidu.com/it/u=786234359,4132947071&fm=253&fmt=auto&app=138&f=PNG?w=778&h=500');
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+
+          .copy-button {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          }
+
+          .copy-button:hover {
+            background-color: #45a049;
+          }
+
+          .link {
+            color: #007bff;
+            transition: color 0.3s ease;
+          }
+
+          .link:hover {
+            color: #0056b3;
+          }
+
+          .ip {
+            font-size: 1.5em;
+          }
+
+          .ip-value {
+            font-size: 1.5em;
+          }
+
+          .script-output {
+            font-size: 1.5em;
+          }
+
+        </style>
+      </head>
+      <body>
+        <h2>You can copy the IP and <a class="link" href="https://search.zhuoc.link">click here</a> to search more information about IP in the world.</h2>
+        <pre><span class="ip">IP</span>: <span class="ip-value">${ip}</span><button class="copy-button" onclick="copyToClipboard('${ip}')">Copy IP</button></pre>
+        <pre class="script-output">${jsonResponse}</pre>
+        <script>
+          function copyToClipboard(text) {
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            alert('IP address copied to clipboard: ' + text);
+          }
+        </script>
+        <h3><a href="https://a.zhuoc.link">One Link<a></h3>
+        <footer>
+		      <p>powered by <a href="https://www.github.com/zhuolhc">© 2023 zhuo<img src="https://www.zhuoc.top/uploads/images/de30c06c99d8393d149d6b1a8a2cd3ae.jpeg" alt="小青柠" width="20" height="20"><a></p>
+	        </footer>
+      </body>
+    </html>
